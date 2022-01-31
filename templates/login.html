@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <section>
+        <div class="main-container">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li class="active" onclick="changeForm(this)">Login</li>
+                        <li onclick="changeForm(this)">Register</li>
+                    </ul>
+                </nav>
+                <form action="{{url_for('login')}}" name="loginForm" class="loginForm " method="post">
+                    <div class="field">
+                        <span><i class="far fa-user"></i></span>
+                        <input type="text" name="username" id="username" placeholder="Enter your email">
+                    </div>
+                    <div class="field">
+                        <span><i class="fas fa-key"></i></span>
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="field">
+                        <a href="">Forgot Your password</a>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+                <form action="{{url_for('register')}}" name="registerForm" class="registerForm hiddenForm" method="post">
+                    <div class="field">
+                        <span><i class="far fa-user"></i></span>
+                        <input type="text" name="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="field">
+                        <span><i class="fas fa-key"></i></span>
+                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="field">
+                        <span><i class="fas fa-key"></i></span>
+                        <input type="password" name="conPassword" id="conPassword" placeholder="Re-enter your password">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+</body>
+</html>
