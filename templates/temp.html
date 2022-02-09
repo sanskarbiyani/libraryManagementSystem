@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{book[1]}} </title>    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/book.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <section>
+        <nav class="box-shadow">
+            <ul>
+                <li>Logout</li>
+                <li>Home</li>
+                <li>Genre</li>
+            </ul>
+        </nav>
+        <div class="sub-nav box-shadow"></div>
+        <div class="main-content box-shadow">
+            <div class="book-image-container">
+                <img src="{{ url_for('static', filename='img/temp.jpg') }}" alt="bookImage">
+            </div>
+            <div class="book-info">
+                <h2><strong>{{book[1]}}</strong></h2>
+                <p class="author-name"> <i>by </i> <strong> {{book[2]}}</strong></p>
+                <p> <i>Date Published: </i> {{book[3]}}</p>
+                <p> <i>Price: </i> {{book[4]}}</p>
+                <p><i>Number of Chapters: </i> {{book[5]}} </p>
+                <p><i>Number of Reviews: </i> {{book[6]}} </p>
+                <p><i>Number of Readers: </i> {{book[7]}} </p>
+                <p>
+                    <i>Description: </i>
+                    <p> {{book[8]}} </p>
+                </p>
+            </div>
+             
+        </div>
+    </section>
+</body>
+</html>

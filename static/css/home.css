@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin: 0.5rem;
+    font-size: 1.15rem;
+}
+
+a {
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+a:hover {
+    color: #6892D5;
+}
+
+.box-shadow {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #6892D5;
+}
+
+section {
+    background-color: rgb(244, 249, 249, 0.1);
+    background-image: radial-gradient(circle at 3% 7%, rgba(132, 223, 255) 19%, rgba(132, 223, 255, 0.7) 19.05% 25%, rgb(132, 223, 255, 0.4) 25.07% 31%, rgba(132, 223, 255, 0.15) 31.09%),
+        radial-gradient(circle at 98% 105%, rgba(132, 223, 255) 17%, rgba(132, 223, 255, 0.7) 17% 20%, rgba(132, 223, 255, 0.4) 20.2% 23%, rgba(132, 223, 255, 0.12) 23.4%);
+    width: 100vw;
+    height: 100vh;
+    /* To prevent first child from pushing the main container along with it when margin is added. It is the default behavior of margins */
+    overflow: hidden;
+    display: inline-grid;
+    grid-template-rows: 0.2vh 10vh 85vh 0.25vh;
+    grid-template-columns: 2vw 88vw 3.5vw;
+    row-gap: 1.5vh;
+    column-gap: 1.5vw;
+}
+
+section nav {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* border: 1px solid grey; */
+    text-align: right;
+    display: flex;
+    align-items: baseline;
+    padding: 0 1rem;
+    justify-content: flex-end;
+}
+
+section nav ul {
+    height: 100%;
+    padding: 0 1rem;
+}
+
+section nav ul li {
+    display: inline-block;
+    /* width: 7rem; */
+    height: 80%;
+    font-size: 1.25rem;
+    line-height: 3.5;
+    margin: 0 2vh;
+}
+
+form {
+    /* display: inline-block; */
+    margin: 0 5vw;
+}
+
+form div {
+    display: inline-block;
+}
+
+form div span {
+    width: 2.8rem;
+    height: 2.5rem;
+    line-height: 2.5;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(132, 223, 255, 0.4);
+    padding-left: 1rem;
+    text-align: initial;
+}
+
+form div input {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 2.5rem;
+    border-radius: 40px;
+    padding-left: 3.5rem;
+    font-size: 1rem;
+    background-color: transparent;
+    outline: none;
+    border-style: outset;
+    border-color: rgba(132, 223, 255, 0.4);
+}
+
+form button {
+    font-size: 0.9rem;
+    height: 2.2rem;
+    padding: 0 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgba(132, 223, 255, 1);
+    background-color: rgba(132, 223, 255, 0.3);
+}
+
+.content {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding: 2vh 2vw 2vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    margin-top: 2vh;
+    /* position: absolute; */
+}
+
+.main-content .book-image-container {
+    /* width: 35%; */
+    /* height: 65%; */
+    padding: 0 1.5rem;
+    max-width: 40%;
+    max-height: 90%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.book-info {
+    padding: 1rem;
+    max-width: 60%;
+    overflow: hidden;
+    padding-top: 4rem;
+}
+
+.imp-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.book-info .book-name {
+    font-size: 2.5rem;
+}
+
+.book-info .author-name {
+    font-size: 1.5rem;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.reviews {
+    padding: 4vh;
+    width: 100%;
+}

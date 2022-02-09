@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+a:hover {
+    color: #6892D5;
+}
+
+.box-shadow {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #6892D5;
+}
+
+section {
+    background-color: rgb(244, 249, 249, 0.1);
+    background-image: radial-gradient(circle at 3% 7%, rgba(132, 223, 255) 19%, rgba(132, 223, 255, 0.7) 19.05% 25%, rgb(132, 223, 255, 0.4) 25.07% 31%, rgba(132, 223, 255, 0.15) 31.09%),
+        radial-gradient(circle at 98% 105%, rgba(132, 223, 255) 17%, rgba(132, 223, 255, 0.7) 17% 20%, rgba(132, 223, 255, 0.4) 20.2% 23%, rgba(132, 223, 255, 0.12) 23.4%);
+    width: 100vw;
+    height: 100vh;
+    /* To prevent first child from pushing the main container along with it when margin is added. It is the default behavior of margins */
+    overflow: hidden;
+    display: inline-grid;
+    grid-template-rows: 0.2vh 10vh 85vh 0.25vh;
+    grid-template-columns: 2vw 88vw 3.5vw;
+    row-gap: 1.5vh;
+    column-gap: 1.5vw;
+}
+
+section nav {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* border: 1px solid grey; */
+    text-align: right;
+}
+
+section nav ul {
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+section nav ul li {
+    display: inline-block;
+    /* width: 7rem; */
+    height: 80%;
+    font-size: 1.25rem;
+    line-height: 3.5;
+    margin: 0 2vh;
+}
+
+.content {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding: 4vh 10vw;
+    position: relative;
+    text-align: center;
+    /* font-size: 2rem; */
+    overflow-y: auto;
+}
