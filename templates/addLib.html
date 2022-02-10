@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <section>
+        <div class="main-container">
+            <nav class="box-shadow upper-nav">
+                <ul>
+                    <li> <a href="{{ url_for('dashboard') }}">Home</a> </li>
+                    <li> <a href="{{ url_for('get_genre') }}">Genres</a> </li>
+                </ul>
+            </nav>
+            <div class="container">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div style="margin-top: 15px;">
+                        {% for message in messages %}
+                            <p class="flashes">{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                <form action="{{url_for('add_lib')}}" name="bookForm" class="loginForm" method="post">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 3rem; margin-top: 2.5rem;">Add Librarian</h1>
+                    <div class="field">
+                        <span><i class="bi bi-person"></i></span>
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="field">
+                        <span><i class="bi bi-person"></i></span>
+                        <input type="number" name="age" id="age" placeholder="Enter Age" min="15" max="110" required>
+                    </div>
+                    <div class="field">
+                        <span><i class="bi bi-person"></i></span>
+                        <input type="number" name="salary" id="salary" placeholder="Enter Salary" required>
+                    </div>
+                    Gender: 
+                    <input type="radio" name="gender" value="0" id="m">
+                    <label for="m">Male</label>
+                    <input type="radio" name="gender" value="1" id="f">
+                    <label for="f">Female</label>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

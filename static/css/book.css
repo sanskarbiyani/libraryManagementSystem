@@ -49,13 +49,15 @@ section nav {
     grid-row-end: 3;
     /* border: 1px solid grey; */
     text-align: right;
+    display: flex;
+    align-items: baseline;
+    padding: 0 1rem;
+    justify-content: flex-end;
 }
 
 section nav ul {
-    display: block;
-    width: 70%;
     height: 100%;
-    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 section nav ul li {
@@ -125,4 +127,12 @@ img {
 .reviews {
     padding: 4vh;
     width: 100%;
+}
+
+.hidden-form {
+    display: none;
+}
+
+textarea {
+    background-color: transparent;
 }

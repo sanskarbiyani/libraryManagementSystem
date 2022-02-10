@@ -37,14 +37,14 @@ section {
     overflow: hidden;
     display: inline-grid;
     grid-template-rows: 0.25vh 10vh 85vh 0.25vh;
-    grid-template-columns: 0.25vw 15vw 77vw 0.25vw;
+    grid-template-columns: 0.25vw 94vw 0.25vw;
     row-gap: 1.5vh;
     column-gap: 1.5vw;
 }
 
 section nav {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
     /* border: 1px solid grey; */
@@ -67,15 +67,8 @@ section nav ul li {
     margin: 0 2vh;
 }
 
-.sub-nav {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
 .content {
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
@@ -92,44 +85,25 @@ section nav ul li {
     /* position: absolute; */
 }
 
-.main-content .book-image-container {
-    /* width: 35%; */
-    /* height: 65%; */
-    padding: 0 1.5rem;
-    max-width: 40%;
-    max-height: 90%;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.book-info {
-    padding: 1rem;
-    max-width: 60%;
-    overflow: hidden;
-    padding-top: 4rem;
-}
-
-.imp-details {
+.genre-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    padding: 2rem;
     justify-content: space-evenly;
 }
 
-.book-info .book-name {
-    font-size: 2.5rem;
-}
-
-.book-info .author-name {
+.genre {
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.8;
     font-size: 1.5rem;
-    text-align: right;
-    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
 }
 
-.reviews {
-    padding: 4vh;
-    width: 100%;
+.genre:hover {
+    border-color: white;
+    color: white;
+    background-color: #6892D5;
 }

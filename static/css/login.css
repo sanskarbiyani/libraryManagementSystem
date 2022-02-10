@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #6892D5;
 }
 
 section {
@@ -12,6 +13,21 @@ section {
     height: 100vh;
     /* To prevent first child from pushing the main container along with it when margin is added. It is the default behavior of margins */
     overflow: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: #AAAAAA;
+}
+
+a:hover {
+    color: #6892D5;
+}
+
+.flashes {
+    color: red;
+    text-align: center;
 }
 
 .main-container {
@@ -27,7 +43,7 @@ section {
 .container {
     width: 55%;
     border: 1px solid transparent;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .container nav {
@@ -37,7 +53,7 @@ section {
 
 .container nav ul {
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
 }
@@ -56,10 +72,35 @@ section {
     border-color: rgba(132, 223, 255, 0.7);
 }
 
+section nav {
+    /* border: 1px solid grey; */
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    padding: 0 1rem;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+section nav ul {
+    height: 100%;
+    padding: 0 1rem;
+}
+
+section nav ul li {
+    display: inline-block;
+    /* width: 7rem; */
+    height: 50%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 2vh;
+}
+
 /* LOGIN FORM */
 
 form {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     text-align: center;
 }
 
@@ -100,7 +141,7 @@ form div input {
 }
 
 form div:last-child {
-    padding: 0 5rem;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
 }
@@ -111,7 +152,7 @@ form div a {
 
 form button {
     font-size: 0.9rem;
-    height: 2.2rem;
+    /* height: 2.2rem; */
     width: 8rem;
     border-radius: 20px;
     cursor: pointer;
@@ -125,4 +166,23 @@ form button:hover {
 
 .hiddenForm {
     display: none;
+}
+
+.forgot-pw {
+    display: inline-block;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgba(132, 223, 255, 1);
+    background-color: rgba(132, 223, 255, 0.3);
+    height: auto;
+    width: auto;
+    padding: 0 1rem;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    height: 2.7rem;
+    width: 80%;
 }

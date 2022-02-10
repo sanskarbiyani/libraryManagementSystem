@@ -10,8 +10,18 @@ function changeForm(elem){
         } else {
             elem.parentElement.lastElementChild.classList.add("active");
             elem.parentElement.firstElementChild.classList.remove("active");
+            const list = document.getElementsByClassName('change')[0]
+            list.style.marginTop = "1rem";
             registerForm.classList.remove("hiddenForm");
             loginForm.classList.add("hiddenForm");
         }
     }
+}
+
+function forgotPassword(){
+    const elem = document.querySelector(".loginForm #password")
+    elem.disabled = "True";
+    const form = document.querySelector(".loginForm")
+    form.action = "/forgotPassword"
+    console.log(elem);
 }

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #6892D5;
 }
 
 h2 {
@@ -112,6 +113,12 @@ form button {
     cursor: pointer;
     border: 1px solid rgba(132, 223, 255, 1);
     background-color: rgba(132, 223, 255, 0.3);
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .content {

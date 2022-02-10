@@ -13,10 +13,10 @@
 <body>
     <section>
         <nav class="box-shadow">
-            {% if current_user.is_Librarian==1: %}
+            {% if current_user.librarian==1: %}
                 <ul>
-                    <li>Add Book</li>
-                    <li>Add Lib</li>
+                    <li> <a href="{{ url_for('add_book') }}">Add Book</a> </li>
+                    <li> <a href="{{ url_for('add_lib') }}">Add Admin</a> </li>
                 </ul>
             {% endif %}
             <form action="{{ url_for('search_book') }}" method="get">
@@ -27,14 +27,17 @@
                 <button type="submit">Go</button>
             </form>
             <ul>
+                {% if current_user.member==1 %}
+                    <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                {% endif %}
                 <li> <a href="{{ url_for('logout') }}">Logout</a> </li>
                 <li> <a href="{{ url_for('dashboard') }}">Home</a> </li>
-                <li>Genre</li>
+                <li> <a href="{{ url_for('get_genre') }}">Genres</a> </li>
             </ul>
         </nav>
         <div class="content box-shadow">
-            <div class="book-info">
-                <ul>
+            {% if books %}
+                <ul class="books-container mt-4">
                     {% for book in books: %}
                         <div class="card" style="width: 15rem; background-color: transparent;">
                             <img src="{{ url_for('static', filename='img/temp.jpg')}}" alt="book-image" height="300px">
@@ -42,12 +45,16 @@
                                 <h5 class="card-title">{{book[1]}}</h5>
                                 <p class="card-text"><i>by </i> {{ book[2] }}</p>
                                 <a class="card-link" href="{{url_for('get_book', isbn=book[0])}}">Get Book</a>
+                                {% if current_user.librarian==1 %}
+                                <a class="card-link" href="{{url_for('delete_book', isbn=book[0])}}">Delete Book</a>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
                 </ul>
-            </div>
-             
+            {% else: %}
+                <p>No books found with the query</p>
+            {% endif %}
         </div>
     </section>
 </body>
